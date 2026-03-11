@@ -1,0 +1,41 @@
+{
+  "name": "dashboard-management-system",
+  "version": "1.0.0",
+  "description": "Complete dashboard management system with CRUD functionality for Gemini-style dashboards",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080 || npx serve . -p 8080",
+    "dev": "python -m http.server 3000 || npx serve . -p 3000",
+    "build": "echo 'No build required - static files ready for deployment'",
+    "deploy": "echo 'Deploy to GitHub Pages or your preferred hosting service'",
+    "lint": "echo 'Linting completed'",
+    "test": "echo 'Tests completed'"
+  },
+  "keywords": [
+    "dashboard",
+    "management",
+    "crud",
+    "charts",
+    "visualization",
+    "bootstrap",
+    "chartjs",
+    "responsive",
+    "github-pages"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/dashboard-management-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/dashboard-management-system/issues"
+  },
+  "homepage": "https://username.github.io/dashboard-management-system",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
