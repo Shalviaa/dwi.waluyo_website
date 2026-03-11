@@ -230,6 +230,122 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Excel Upload Section */
+.excel-upload-zone {
+    border: 2px dashed #e3e6f0;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #f8f9fc;
+}
+
+.excel-upload-zone:hover {
+    border-color: #4e73df;
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+.excel-upload-zone.dragover {
+    border-color: #4e73df;
+    background-color: rgba(78, 115, 223, 0.1);
+    transform: scale(1.02);
+}
+
+.excel-upload-zone i {
+    color: #858796;
+    transition: color 0.3s ease;
+}
+
+.excel-upload-zone:hover i {
+    color: #4e73df;
+}
+
+.excel-preview-table {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.875rem;
+}
+
+.excel-preview-table th {
+    background-color: #4e73df;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.excel-preview-table td {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Gemini Style Elements */
+.gemini-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gemini-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow: hidden;
+}
+
+.gemini-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.gemini-stats-card {
+    border-radius: 15px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+}
+
+.gemini-stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gemini-stats-card.primary {
+    border-left-color: #4e73df;
+}
+
+.gemini-stats-card.success {
+    border-left-color: #1cc88a;
+}
+
+.gemini-stats-card.info {
+    border-left-color: #36b9cc;
+}
+
+.gemini-stats-card.warning {
+    border-left-color: #f6c23e;
+}
+
+/* Loading States */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4e73df;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Responsive */
 @media (max-width: 767.98px) {
     .sidebar {
@@ -245,43 +361,9 @@ main {
     .col-xl-3 {
         margin-bottom: 1rem;
     }
-}
-
-/* Loading Spinner */
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-}
-
-.spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #4e73df;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Content Sections */
-.content-section {
-    animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .excel-upload-zone {
+        padding: 30px 15px;
     }
 }
 
@@ -301,4 +383,199 @@ main {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+/* Content Sections */
+.content-section {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* React Code Editor */
+.react-code-editor {
+    border: 1px solid #e3e6f0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8f9fc;
+}
+
+.react-code-editor .editor-header {
+    background-color: #4e73df;
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.react-code-editor textarea {
+    border: none;
+    background-color: #2d3748;
+    color: #e2e8f0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.react-code-editor textarea:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* React Component Container */
+.react-component-container {
+    border: 1px solid #e3e6f0;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.react-component-container .custom-dashboard {
+    text-align: center;
+}
+
+.react-component-container .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.react-component-container .metric-card {
+    padding: 20px;
+    border: 1px solid #e3e6f0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.react-component-container .metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.react-component-container .metric-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.react-component-container .metric-card p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Live Preview */
+.live-preview-container {
+    border: 2px dashed #e3e6f0;
+    border-radius: 8px;
+    min-height: 150px;
+    background-color: #f8f9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.live-preview-container.has-content {
+    border-style: solid;
+    border-color: #4e73df;
+    background-color: white;
+}
+
+.live-preview-container .preview-placeholder {
+    color: #858796;
+    font-style: italic;
+}
+
+/* Compilation Status */
+.compilation-status {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    margin-top: 10px;
+}
+
+.compilation-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.compilation-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.compilation-status.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* Enhanced Dashboard Cards */
+.dashboard-card-enhanced {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card-enhanced:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card-enhanced .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.dashboard-card-enhanced .card-body {
+    padding: 25px;
+}
+
+/* Code Highlighting */
+.code-highlight {
+    background-color: #f8f9fc;
+    border-left: 4px solid #4e73df;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 8px 8px 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+}
+
+/* Loading Animation for React */
+.react-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.react-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4e73df;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
