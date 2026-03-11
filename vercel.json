@@ -1,13 +1,29 @@
 {
+  "version": 2,
+  "name": "dashboard-management-system",
   "outputDirectory": ".",
-  "buildCommand": "echo 'No build required'",
-  "devCommand": "python -m http.server 3000 || npx serve . -p 3000",
-  "installCommand": "echo 'No dependencies to install'",
-  "framework": null,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "style.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "app.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
