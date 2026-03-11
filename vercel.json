@@ -1,3 +1,6 @@
 {
-  "outputDirectory": "public"
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": "public",
+  "installCommand": "echo 'No dependencies'",
+  "framework": null
 }
