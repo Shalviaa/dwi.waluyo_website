@@ -6,8 +6,6 @@
   "scripts": {
     "start": "python -m http.server 8080 || npx serve . -p 8080",
     "dev": "python -m http.server 3000 || npx serve . -p 3000",
-    "build": "echo 'No build required - static files ready for deployment'",
-    "deploy": "echo 'Deploy to GitHub Pages or your preferred hosting service'",
     "lint": "echo 'Linting completed'",
     "test": "echo 'Tests completed'"
   },
