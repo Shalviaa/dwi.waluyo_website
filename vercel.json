@@ -1,0 +1,13 @@
+{
+  "outputDirectory": ".",
+  "buildCommand": "echo 'No build required'",
+  "devCommand": "python -m http.server 3000 || npx serve . -p 3000",
+  "installCommand": "echo 'No dependencies to install'",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
